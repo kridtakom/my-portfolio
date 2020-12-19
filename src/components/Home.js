@@ -88,7 +88,7 @@ export default function Home() {
           <section className="section">
             <div className="container">
               <div className="row justify-content-center text-center mb-4">
-                <div className="col-5">
+                <div className="headSection">
                   <h3 className="h3 heading">Frameworks</h3>
                   <p className="fontTH">
                     สิ่งที่ผ่านเข้ามาล้วนแต่สร้างประสบการณ์ใหม่ๆ
@@ -151,7 +151,7 @@ export default function Home() {
           <section className="section">
             <div className="container">
               <div className="row justify-content-center text-center mb-4">
-                <div className="col-5 mb-4">
+                <div className="headSection mb-4">
                   <h3 className="h3 heading">My Skills</h3>
                   <p className="fontTH">
                     ชายหนุ่มผู้มีความสนใจในด้าน Web Application
@@ -163,14 +163,16 @@ export default function Home() {
               </div>
               <div className="row mb-2">
                 <div className="col-12 col-sm-6 col-md-6 col-lg-3">
-                  <span className="la la-code la-3x mb-4"></span>
-                  <h3 className="h4 mb-2">
-                    <b>Web Development</b>
-                  </h3>
-                  <p className="fontTH">
-                    สามารถพัฒนา Web Application ได้ทั้งฝั่งของ Back-end และ
-                    Front-end
-                  </p>
+                  <div className="headSkill">
+                    <span className="la la-code la-3x mb-4"></span>
+                    <h3 className="h4 mb-2">
+                      <b>Web Development</b>
+                    </h3>
+                    <p className="fontTH">
+                      สามารถพัฒนา Web Application ได้ทั้งฝั่งของ Back-end และ
+                      Front-end
+                    </p>
+                  </div>
                   <ul className="list-unstyled list-line">
                     <li>Node.js</li>
                     <li>AdonisJs</li>
@@ -182,14 +184,16 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="col-12 col-sm-6 col-md-6 col-lg-3">
-                  <span className="la la-database la-3x mb-4"></span>
-                  <h3 className="h4 mb-2">
-                    <b>Database</b>
-                  </h3>
-                  <p className="fontTH">
-                    มีความเข้าใจ และสามารถใช้งานฐานข้อมูลแบบ Relational Database
-                    ได้เป็นอย่างดี
-                  </p>
+                  <div className="headSkill">
+                    <span className="la la-database la-3x mb-4"></span>
+                    <h3 className="h4 mb-2">
+                      <b>Database</b>
+                    </h3>
+                    <p className="fontTH">
+                      มีความเข้าใจ และสามารถใช้งานฐานข้อมูลแบบ Relational
+                      Database ได้เป็นอย่างดี
+                    </p>
+                  </div>
                   <ul className="list-unstyled list-line">
                     <li>Database Design</li>
                     <li>Database Architecture</li>
@@ -197,14 +201,16 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="col-12 col-sm-6 col-md-6 col-lg-3">
-                  <span className="la la-github la-3x mb-4"></span>
-                  <h3 className="h4 mb-2">
-                    <b>Git System</b>
-                  </h3>
-                  <p className="fontTH">
-                    สามารถใช้งานระบบ Git สำหรับการพัฒนา software
-                    ร่วมกันกับทีมพัฒนาได้
-                  </p>
+                  <div className="headSkill">
+                    <span className="la la-github la-3x mb-4"></span>
+                    <h3 className="h4 mb-2">
+                      <b>Git System</b>
+                    </h3>
+                    <p className="fontTH">
+                      สามารถใช้งานระบบ Git สำหรับการพัฒนา software
+                      ร่วมกันกับทีมพัฒนาได้
+                    </p>
+                  </div>
                   <ul className="list-unstyled list-line">
                     <li>Github</li>
                     <li>Gitlab</li>
@@ -212,13 +218,15 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="col-12 col-sm-6 col-md-6 col-lg-3">
-                  <span className="la la-laptop la-3x mb-4"></span>
-                  <h3 className="h4 mb-2">
-                    <b>Other Skills</b>
-                  </h3>
-                  <p className="fontTH">
-                    ความรู้ความสามารถในการเขียนโปรแกรมด้วยภาษาอื่นๆ
-                  </p>
+                  <div className="headSkill">
+                    <span className="la la-laptop la-3x mb-4"></span>
+                    <h3 className="h4 mb-2">
+                      <b>Other Skills</b>
+                    </h3>
+                    <p className="fontTH">
+                      ความรู้ความสามารถในการเขียนโปรแกรมด้วยภาษาอื่นๆ
+                    </p>
+                  </div>
                   <ul className="list-unstyled list-line">
                     <li>JAVA</li>
                     <li>Network design & config</li>
