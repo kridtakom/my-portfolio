@@ -1,0 +1,48 @@
+.fontTH {
+  font-family: "Sarabun", sans-serif;
+}
+
+.fontHead {
+  font-family: "Prompt", sans-serif;
+}
+
+.navBrand {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .navBrand {
+    font-family: "Montserrat Subrayada", sans-serif;
+    font-size: 1.5rem;
+  }
+  ul {
+    text-align: center;
+  }
+  .list-group-horizontal {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.logoPic {
+  display: inline-block;
+}
+
+.navButton:hover {
+  text-decoration: underline;
+}
+
+.item .item-wrap:after {
+  z-index: 2;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+}
