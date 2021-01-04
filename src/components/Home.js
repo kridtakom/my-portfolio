@@ -1,39 +1,82 @@
 import React, { useState, useEffect } from "react";
 import "./TH.css";
+import Loadpage from "./Loadpage.js";
+import Swal from "sweetalert2";
+import axios from "axios";
 
 export default function Home() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
 
-  async function fetchData() {
-    fetch(
-      "https://script.google.com/macros/s/AKfycbxqTLVXw0uAZFf8Vv86eVy5kgYuQoUFsrCF5vApi3Hze2LCuKDG/exec?path=/portfolio"
-    )
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setItems(result.items);
-        },
+  const showContentDetail = async (itemSelect) => {
+    let newI = {};
+    const newItem2 = items.map((item) => {
+      if (itemSelect.Name === item.Name) {
+        newI = { ...item };
+      }
+    });
 
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      );
-  }
+    if (newI) {
+      Swal.fire({
+        background: "#FFFCFB",
+        title: `<span style="font-size:32px; font-family: 'Raleway'; color:black; padding-top:8px"> Project: ${newI.Name} </span>`,
+        html:
+          `<hr style=" border:3px solid #000000; border-radius: 5px; width: 75%; "/> <div style="align-items: center; padding-top: 10px;"/><span style="font-family: 'Sarabun';">${newI.Description}</span></div>` +
+          `${
+            newI.ImgMsg
+              ? "<br/><a href='" +
+                newI.URL +
+                "'><button class='btn btn-outline-dark'>" +
+                newI.ImgMsg +
+                "</button></a>"
+              : ""
+          }`,
+        imageUrl: `${newI.Picture}`,
+        imageAlt: "Custom image",
+        showCloseButton: true,
+        showConfirmButton: false,
+        width: "900px",
+        padding: "4em",
+      });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
+    }
+  };
 
   useEffect(() => {
+    const fetchData = async () => {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxqTLVXw0uAZFf8Vv86eVy5kgYuQoUFsrCF5vApi3Hze2LCuKDG/exec?path=/portfolio"
+      )
+        .then((res) => res.json())
+        .then(
+          (result) => {
+            setIsLoaded(true);
+            setItems(result.items);
+          },
+
+          (error) => {
+            setIsLoaded(true);
+            setError(error);
+          }
+        );
+    };
     fetchData();
   }, [items.Name]);
-
-  console.log(items);
 
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return (
+      <>
+        <Loadpage />
+      </>
+    );
   } else {
     return (
       <div>
@@ -65,7 +108,10 @@ export default function Home() {
                       className="item web col-sm-6 col-md-4 col-lg-4 mb-4"
                       key={index}
                     >
-                      <a href={item.URL} className="item-wrap fancybox">
+                      <div
+                        className="item-wrap fancybox"
+                        onClick={() => showContentDetail(item)}
+                      >
                         <div className="work-info">
                           <h3>{item.Name}</h3>
                           <hr
@@ -78,7 +124,7 @@ export default function Home() {
                           <span>{item.Course}</span>
                         </div>
                         <img className="img-fluid" src={item.Image} />
-                      </a>
+                      </div>
                     </div>
                   );
                 })}
