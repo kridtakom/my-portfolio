@@ -71,7 +71,7 @@
   width: 80%;
 }
 
-.la:hover {
+div a .la:hover {
   background-color: #333439;
   color: white;
   border-radius: 50%;
@@ -79,7 +79,7 @@
   transition: 0.1s;
 }
 
-.la {
+div a .la {
   padding: 10px;
 }
 
