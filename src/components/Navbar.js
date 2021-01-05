@@ -10,15 +10,15 @@ export default function Navbar() {
           <div className="row align-items-start">
             <div className="col-md-12">
               <ul className="custom-menu list-group list-group-horizontal">
-                <li className="navButton mx-3">
+                <li className="navButton mx-3 heading">
                   <Link to="/"> Home</Link>
                 </li>
-                <li className="navButton mx-3">
+                <li className="navButton mx-3 heading">
                   <Link to="/aboutme"> About Me </Link>
                 </li>
-                <li className="navButton mx-3">
+                {/* <li className="navButton mx-3">
                   <Link to="/contract"> Contract </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

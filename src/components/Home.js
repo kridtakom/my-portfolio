@@ -283,25 +283,6 @@ export default function Home() {
             </div>
           </section>
         </main>
-        <footer className="footer" role="contentinfo">
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-12 d-flex justify-content-center">
-                <p className="mb-1">
-                  &copy; Copyright MyPortfolio. All Rights Reserved
-                </p>
-                <div className="credits">
-                  Designed by &nbsp;
-                  <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
-
-        <a href="#" className="back-to-top">
-          <i className="icofont-simple-up"></i>
-        </a>
       </div>
     );
   }

@@ -62,3 +62,27 @@
     padding-top: 35px;
   }
 }
+
+.pill {
+  height: 0px;
+  border-radius: 2px;
+  color: #120401;
+  border: 2px solid currentColor;
+  width: 80%;
+}
+
+.la:hover {
+  background-color: #333439;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  transition: 0.1s;
+}
+
+.la {
+  padding: 10px;
+}
+
+.section {
+  padding: 3.8rem 0;
+}

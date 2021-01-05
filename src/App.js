@@ -15,9 +15,9 @@ export default function App() {
       <Route path="/aboutme">
         <Aboutme />
       </Route>
-      <Route path="/contract">
+      {/* <Route path="/contract">
         <Contract />
-      </Route>
+      </Route> */}
     </div>
   );
 }
